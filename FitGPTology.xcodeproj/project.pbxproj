@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72429BD02B8C228400E800EB /* FitGPTologyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72429BCF2B8C228400E800EB /* FitGPTologyApp.swift */; };
+		72429BD22B8C228400E800EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72429BD12B8C228400E800EB /* ContentView.swift */; };
+		72429BD42B8C228400E800EB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72429BD32B8C228400E800EB /* Item.swift */; };
+		72429BD62B8C228600E800EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72429BD52B8C228600E800EB /* Assets.xcassets */; };
+		72429BD92B8C228600E800EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72429BD82B8C228600E800EB /* Preview Assets.xcassets */; };
+		72429BEB2B8C2A5A00E800EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72429BEA2B8C2A5A00E800EB /* LaunchScreen.storyboard */; };
+		72429BED2B8C2BAE00E800EB /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72429BEC2B8C2BAE00E800EB /* OnboardingView.swift */; };
+		72429BEF2B8C2E2600E800EB /* Colors+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72429BEE2B8C2E2600E800EB /* Colors+Ext.swift */; };
+		72429BF12B8C387C00E800EB /* BtnDynamicAct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72429BF02B8C387C00E800EB /* BtnDynamicAct.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		72429BCC2B8C228400E800EB /* FitGPTology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitGPTology.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72429BCF2B8C228400E800EB /* FitGPTologyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitGPTologyApp.swift; sourceTree = "<group>"; };
+		72429BD12B8C228400E800EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		72429BD32B8C228400E800EB /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		72429BD52B8C228600E800EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		72429BD82B8C228600E800EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		72429BE92B8C29CA00E800EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		72429BEA2B8C2A5A00E800EB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		72429BEC2B8C2BAE00E800EB /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		72429BEE2B8C2E2600E800EB /* Colors+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Ext.swift"; sourceTree = "<group>"; };
+		72429BF02B8C387C00E800EB /* BtnDynamicAct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnDynamicAct.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		72429BC92B8C228400E800EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72429BC32B8C228400E800EB = {
+			isa = PBXGroup;
+			children = (
+				72429BCE2B8C228400E800EB /* FitGPTology */,
+				72429BCD2B8C228400E800EB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		72429BCD2B8C228400E800EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72429BCC2B8C228400E800EB /* FitGPTology.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72429BCE2B8C228400E800EB /* FitGPTology */ = {
+			isa = PBXGroup;
+			children = (
+				72429BE92B8C29CA00E800EB /* Info.plist */,
+				72429BDF2B8C239F00E800EB /* Model */,
+				72429BE02B8C23A700E800EB /* View */,
+				72429BE12B8C247F00E800EB /* Controller */,
+				72429BE22B8C249D00E800EB /* Utilities */,
+				72429BE62B8C257A00E800EB /* Screens */,
+				72429BCF2B8C228400E800EB /* FitGPTologyApp.swift */,
+				72429BD52B8C228600E800EB /* Assets.xcassets */,
+				72429BD72B8C228600E800EB /* Preview Content */,
+			);
+			path = FitGPTology;
+			sourceTree = "<group>";
+		};
+		72429BD72B8C228600E800EB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				72429BD82B8C228600E800EB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		72429BDF2B8C239F00E800EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				72429BD32B8C228400E800EB /* Item.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72429BE02B8C23A700E800EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72429BE82B8C262300E800EB /* Onboarding */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72429BE12B8C247F00E800EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		72429BE22B8C249D00E800EB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				72429BE32B8C24A700E800EB /* Alerts */,
+				72429BE52B8C24B900E800EB /* Managers */,
+				72429BE42B8C24B000E800EB /* Extenstions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		72429BE32B8C24A700E800EB /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		72429BE42B8C24B000E800EB /* Extenstions */ = {
+			isa = PBXGroup;
+			children = (
+				72429BEE2B8C2E2600E800EB /* Colors+Ext.swift */,
+			);
+			path = Extenstions;
+			sourceTree = "<group>";
+		};
+		72429BE52B8C24B900E800EB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		72429BE62B8C257A00E800EB /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				72429BEA2B8C2A5A00E800EB /* LaunchScreen.storyboard */,
+				72429BE72B8C261200E800EB /* Onboarding */,
+				72429BD12B8C228400E800EB /* ContentView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		72429BE72B8C261200E800EB /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				72429BEC2B8C2BAE00E800EB /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		72429BE82B8C262300E800EB /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				72429BF02B8C387C00E800EB /* BtnDynamicAct.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		72429BCB2B8C228400E800EB /* FitGPTology */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72429BDC2B8C228600E800EB /* Build configuration list for PBXNativeTarget "FitGPTology" */;
+			buildPhases = (
+				72429BC82B8C228400E800EB /* Sources */,
+				72429BC92B8C228400E800EB /* Frameworks */,
+				72429BCA2B8C228400E800EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FitGPTology;
+			productName = FitGPTology;
+			productReference = 72429BCC2B8C228400E800EB /* FitGPTology.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72429BC42B8C228400E800EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					72429BCB2B8C228400E800EB = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 72429BC72B8C228400E800EB /* Build configuration list for PBXProject "FitGPTology" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 72429BC32B8C228400E800EB;
+			productRefGroup = 72429BCD2B8C228400E800EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72429BCB2B8C228400E800EB /* FitGPTology */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		72429BCA2B8C228400E800EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72429BEB2B8C2A5A00E800EB /* LaunchScreen.storyboard in Resources */,
+				72429BD92B8C228600E800EB /* Preview Assets.xcassets in Resources */,
+				72429BD62B8C228600E800EB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		72429BC82B8C228400E800EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72429BEF2B8C2E2600E800EB /* Colors+Ext.swift in Sources */,
+				72429BD22B8C228400E800EB /* ContentView.swift in Sources */,
+				72429BED2B8C2BAE00E800EB /* OnboardingView.swift in Sources */,
+				72429BD42B8C228400E800EB /* Item.swift in Sources */,
+				72429BD02B8C228400E800EB /* FitGPTologyApp.swift in Sources */,
+				72429BF12B8C387C00E800EB /* BtnDynamicAct.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		72429BDA2B8C228600E800EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		72429BDB2B8C228600E800EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		72429BDD2B8C228600E800EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FitGPTology/Preview Content\"";
+				DEVELOPMENT_TEAM = B66B7LDLW4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FitGPTology/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danfelogarDev.www.FitGPTology;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		72429BDE2B8C228600E800EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FitGPTology/Preview Content\"";
+				DEVELOPMENT_TEAM = B66B7LDLW4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FitGPTology/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danfelogarDev.www.FitGPTology;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		72429BC72B8C228400E800EB /* Build configuration list for PBXProject "FitGPTology" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72429BDA2B8C228600E800EB /* Debug */,
+				72429BDB2B8C228600E800EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72429BDC2B8C228600E800EB /* Build configuration list for PBXNativeTarget "FitGPTology" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72429BDD2B8C228600E800EB /* Debug */,
+				72429BDE2B8C228600E800EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 72429BC42B8C228400E800EB /* Project object */;
+}
