@@ -40,7 +40,7 @@ struct BtnDynamicAct: View {
                     .fill(Color.yellowLightSwiftUI)
                     .frame(width: btnOffset + 90)
                 Spacer()
-            }
+            }//: HStack
             //4. Circle (Draggable)
             HStack {
                 ZStack {
