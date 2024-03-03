@@ -8,43 +8,27 @@
 import SwiftUI
 import PhotosUI
 import SwiftData
+import OpenAI
 
 struct InputTextPrompt: View {
     //MARK: - Properties
+    @Query(sort: \MessageStore.timeSend) private var messages: [MessageStore]
+    
     @Environment(\.modelContext) private var context
-    @Environment(\.colorScheme) var colorScheme
-    @State private var imageShow: UIImage?
-    @State private var photoPickerItem: PhotosPickerItem?
-    @State private var messageGenerator:String = ""
-    //MARK: - Functions
-    var isDarkMode: Bool {
-        return colorScheme == .dark
-    }
-    //Func
-    func addQuestion () {
-        var messageForSend: MessageStore? = nil
-        //sent and instanse for decode
-        if let base64String = imageShow?.toBase64String() {
-            messageForSend = MessageStore(id: UUID(), owner: OwnerType.user, image: base64String, content: messageGenerator, timeSend: Date())
-        } else {
-            messageForSend = MessageStore(id: UUID(), owner: OwnerType.user, image: nil, content: messageGenerator, timeSend: Date())
-        }
-        
-        if let messageToSend = messageForSend {
-            context.insert(messageToSend)
-        }
-        
-        messageGenerator = ""
-        imageShow = nil
-        photoPickerItem = nil
-    }
+    
+    @FocusState private var focusedField: Field?
+    
+    @StateObject var viewModel = InputTextController()
+    //listening all changes this variable
+    @Binding  var isKeyboardOpen: Bool
+    
     //MARK: - Body
     var body: some View {
         VStack {
             
-            if imageShow != nil {
+            if viewModel.imageShow != nil {
                 ZStack(alignment: .center) {
-                    Image(uiImage: imageShow!)
+                    Image(uiImage: viewModel.imageShow!)
                         .resizable()
                         .scaledToFill()
                         .frame(width: 250, height: 180 )
@@ -56,9 +40,8 @@ struct InputTextPrompt: View {
                 .shadow(color: .gray, radius: 2)
                 .overlay(
                     Button(action: {
-                        // Acción del botón aquí
-                        photoPickerItem = nil
-                        imageShow = nil
+                        viewModel.photoPickerItem = nil
+                        viewModel.imageShow = nil
                     }) {
                         Image(systemName: "xmark")
                             .font(.title)
@@ -75,12 +58,20 @@ struct InputTextPrompt: View {
             }
             
             HStack(spacing: 2) {
-                TextField("Type the message...", text: $messageGenerator)
-                    .frame(height: 35)
+                TextField("Type the message...", text: $viewModel.messageGenerator, axis: .vertical)
+                    .frame(minHeight: 35)
                     .padding(.horizontal, 12)
                     .padding(.vertical, 10)
+                    .focused($focusedField, equals: .messageGenerator)
+                    .onChange(of: focusedField) {
+                        if focusedField == .messageGenerator {
+                            isKeyboardOpen = true
+                        }
+                        print("InputTextPrompt isKeyboardOpen \(isKeyboardOpen)")
+                    }
+                
                 HStack(spacing: 8) {
-                    PhotosPicker(selection: $photoPickerItem, matching: .any(of: [.images, .screenshots])) {
+                    PhotosPicker(selection: $viewModel.photoPickerItem, matching: .any(of: [.images, .screenshots])) {
                         Image(systemName: "paperclip")
                             .font(.system(size: 23, weight: .semibold))
                             .foregroundStyle(Color.blueLightSwiftUI)
@@ -89,8 +80,20 @@ struct InputTextPrompt: View {
                     HStack {
                         Button {
                             //action
-                            if !messageGenerator.isEmpty {
-                                addQuestion()
+                            Task.init {
+                                do {
+                                    isKeyboardOpen = false
+                                    focusedField = nil
+                                    let msmShowUser = try await viewModel.addQuestion()
+                                    context.insert(msmShowUser!)
+                                    
+                                    let msmResponseBot = try await viewModel.getBotResponse(messages)
+                                    context.insert(msmResponseBot!)
+                                    
+                                } catch {
+                                    // Handle the error here.
+                                    viewModel.handleError(error)
+                                }
                             }
                         } label: {
                             Image(systemName: "paperplane.fill")
@@ -99,19 +102,19 @@ struct InputTextPrompt: View {
                                 .padding(.vertical, 10)
                                 .foregroundStyle(.white)
                         }//:Btn
+                        .disabled(viewModel.isLoading || viewModel.messageGenerator.isEmpty)
                     }//: HStack
                     .frame(height: 55)
-                    .background(messageGenerator.isEmpty ? Color.gray : Color.blueLightSwiftUI)
+                    .background(viewModel.messageGenerator.isEmpty || viewModel.isLoading ? Color.gray : Color.blueLightSwiftUI)
                 }//: HStack
             }//: HStack
-            .onChange(of: photoPickerItem) { _, _ in
+            //            .onTapGesture {
+            //                // Aquí intentamos cerrar el teclado
+            //                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            //            }
+            .onChange(of: viewModel.photoPickerItem) { _, _ in
                 Task {
-                    if let photoPickerItem, let data = try? await photoPickerItem.loadTransferable(type: Data.self) {
-                        if let image = UIImage(data: data) {
-                            imageShow = image
-                        }
-                    }
-                    photoPickerItem = nil
+                    await viewModel.loadImageFromPickerItem()
                 }
             }
             .background(Color(.systemBackground))
@@ -119,12 +122,17 @@ struct InputTextPrompt: View {
             .shadow(color: .gray, radius: 2)
             .padding(.horizontal)
         }//: VStack
+        .alert(item: $viewModel.alertItem) { alertItem in
+            Alert(title: alertItem.title,
+                  message: alertItem.message,
+                  dismissButton: alertItem.dismissBtn)
+        }
     }
 }
 
 struct InputTextPrompt_Previews: PreviewProvider {
     static var previews: some View {
-        InputTextPrompt()
+        InputTextPrompt(isKeyboardOpen: .constant(false))
             .previewLayout(.sizeThatFits)
             .padding()
     }

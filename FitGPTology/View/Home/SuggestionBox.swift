@@ -30,11 +30,11 @@ struct SuggestionBox: View {
                     .foregroundStyle(Color.greenLightSwiftUI)
                 
                 Text(title)
-                    .font(.system(size: 18, weight: .bold))
+                    .font(.system(size: 20, weight: .bold))
                     .multilineTextAlignment(.leading)
                 
                 Text(content)
-                    .font(.system(size: 10, weight: .regular))
+                    .font(.system(size: 11, weight: .regular))
                     .multilineTextAlignment(.center)
             }//: VStack
             .padding(10)

@@ -17,10 +17,10 @@ struct EmptyState: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 180, height: 180)
-
+                
                 Text("Hellow! Danfelogar")
                     .font(.system(size: 28,weight: .bold))
-
+                
                 Text("Welcome To FitGPTology! we're Glad You're\n Here. Chat Away And Enjoy The\n experience! 🥋🏋🏽‍♀️")
                     .font(.system(size: 17,weight: .regular))
                     .multilineTextAlignment(.center)
@@ -32,14 +32,14 @@ struct EmptyState: View {
                             title: "Fitness Chat",
                             content: "Ask about training\n plans, diets\n and advice."
                         )
-                        .frame(maxWidth: 145, maxHeight: 145)
-
+                        .frame(maxWidth: 150, maxHeight: 150)
+                        
                         SuggestionBox(
                             iconName: "heart.text.square",
                             title: "Nutrition",
                             content: "Get personalized food\n recommendations"
                         )
-                        .frame(maxWidth: 145, maxHeight: 145)
+                        .frame(maxWidth: 150, maxHeight: 150)
                     }//: HStack
                     HStack(spacing: 12) {
                         SuggestionBox(
@@ -47,14 +47,16 @@ struct EmptyState: View {
                             title: "Training",
                             content: "Design workout\n routines adapted\n to your level"
                         )
-                        .frame(maxWidth: 145, maxHeight: 145)
-
+                        .frame(maxWidth: 150, maxHeight: 150)
+                        
                         SuggestionBox(
-                            iconName: "bed.double.circle",
+                            iconName: "photo.fill.on.rectangle.fill",
                             title: "Recovery",
-                            content: "Learn recovery\n techniques and tips\n to stay in shape."
+                            content: """
+                                    With "create:" you can\n ask for visual help\n with your routines.
+                                    """
                         )
-                        .frame(maxWidth: 145, maxHeight: 145)
+                        .frame(maxWidth: 150, maxHeight: 150)
                     }//: HStack
                 }//: VStack
             }//: VStack

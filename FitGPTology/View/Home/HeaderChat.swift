@@ -24,7 +24,7 @@ struct HeaderChat: View {
                     .font(.system(size: 30, weight: .semibold))
                     .foregroundStyle(.white)
             }//: HStack
-            .frame(width: .infinity)
+            .frame(maxWidth: .infinity)
             .padding(.horizontal)
             .padding(.bottom, 10)
         }//: ZStack

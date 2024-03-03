@@ -31,3 +31,25 @@ extension View {
     }
 }
 
+extension Image {
+    func imgModifier() -> some View {
+        self
+            .resizable()
+            .scaledToFit()
+    }
+    
+    func iconModifier() -> some View {
+        self
+            .imgModifier()
+            .frame(maxWidth: 120)
+            .foregroundStyle(Color.greenLightSwiftUI, Color.yellowLightSwiftUI)
+            .opacity(0.65)
+    }
+}
+
+extension String {
+    func deletingPrefix(_ prefix: String) -> String {
+        guard self.hasPrefix(prefix) else { return self }
+        return String(self.dropFirst(prefix.count))
+    }
+}

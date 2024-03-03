@@ -17,6 +17,10 @@
 		72429BEF2B8C2E2600E800EB /* Colors+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72429BEE2B8C2E2600E800EB /* Colors+Ext.swift */; };
 		72429BF12B8C387C00E800EB /* BtnDynamicAct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72429BF02B8C387C00E800EB /* BtnDynamicAct.swift */; };
 		72A4AB812B8E86F70037EE3A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4AB802B8E86F70037EE3A /* HomeView.swift */; };
+		72A7E1002B9291E200C05E0E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A7E0FF2B9291E200C05E0E /* Alert.swift */; };
+		72A7E1022B92BEC800C05E0E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A7E1012B92BEC800C05E0E /* APIError.swift */; };
+		72D8D51B2B92C0E0001DDE6D /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 72D8D51A2B92C0E0001DDE6D /* OpenAI */; };
+		72D8D5212B92FB47001DDE6D /* InputTextController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D8D5202B92FB47001DDE6D /* InputTextController.swift */; };
 		72DB69372B9107E30068F3C2 /* Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DB69362B9107E30068F3C2 /* Extenstion.swift */; };
 		72DD440F2B8EE2B0007B9EDE /* HeaderChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DD440E2B8EE2B0007B9EDE /* HeaderChat.swift */; };
 		72DD44112B8EE351007B9EDE /* InputTextPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DD44102B8EE351007B9EDE /* InputTextPrompt.swift */; };
@@ -40,6 +44,9 @@
 		72429BEE2B8C2E2600E800EB /* Colors+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Ext.swift"; sourceTree = "<group>"; };
 		72429BF02B8C387C00E800EB /* BtnDynamicAct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnDynamicAct.swift; sourceTree = "<group>"; };
 		72A4AB802B8E86F70037EE3A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		72A7E0FF2B9291E200C05E0E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		72A7E1012B92BEC800C05E0E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		72D8D5202B92FB47001DDE6D /* InputTextController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextController.swift; sourceTree = "<group>"; };
 		72DB69362B9107E30068F3C2 /* Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstion.swift; sourceTree = "<group>"; };
 		72DD440E2B8EE2B0007B9EDE /* HeaderChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderChat.swift; sourceTree = "<group>"; };
 		72DD44102B8EE351007B9EDE /* InputTextPrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextPrompt.swift; sourceTree = "<group>"; };
@@ -55,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72D8D51B2B92C0E0001DDE6D /* OpenAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +128,7 @@
 		72429BE12B8C247F00E800EB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				72A7E0FB2B928D1400C05E0E /* Home */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -137,6 +146,8 @@
 		72429BE32B8C24A700E800EB /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
+				72A7E0FF2B9291E200C05E0E /* Alert.swift */,
+				72A7E1012B92BEC800C05E0E /* APIError.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -194,6 +205,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		72A7E0FB2B928D1400C05E0E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				72D8D5202B92FB47001DDE6D /* InputTextController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		72CF4DEC2B8E9E3900A3E986 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +250,9 @@
 			dependencies = (
 			);
 			name = FitGPTology;
+			packageProductDependencies = (
+				72D8D51A2B92C0E0001DDE6D /* OpenAI */,
+			);
 			productName = FitGPTology;
 			productReference = 72429BCC2B8C228400E800EB /* FitGPTology.app */;
 			productType = "com.apple.product-type.application";
@@ -259,6 +281,9 @@
 				Base,
 			);
 			mainGroup = 72429BC32B8C228400E800EB;
+			packageReferences = (
+				72D8D5192B92C0E0001DDE6D /* XCRemoteSwiftPackageReference "OpenAI" */,
+			);
 			productRefGroup = 72429BCD2B8C228400E800EB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -289,6 +314,7 @@
 				72429BEF2B8C2E2600E800EB /* Colors+Ext.swift in Sources */,
 				72DD44132B8EE49C007B9EDE /* CellTextUser.swift in Sources */,
 				72DD44112B8EE351007B9EDE /* InputTextPrompt.swift in Sources */,
+				72A7E1022B92BEC800C05E0E /* APIError.swift in Sources */,
 				72DD441A2B8EE737007B9EDE /* String+Ext.swift in Sources */,
 				72A4AB812B8E86F70037EE3A /* HomeView.swift in Sources */,
 				72DD441C2B8EEAC9007B9EDE /* Mock+Ext.swift in Sources */,
@@ -300,7 +326,9 @@
 				72429BD02B8C228400E800EB /* FitGPTologyApp.swift in Sources */,
 				72DB69372B9107E30068F3C2 /* Extenstion.swift in Sources */,
 				72429BF12B8C387C00E800EB /* BtnDynamicAct.swift in Sources */,
+				72A7E1002B9291E200C05E0E /* Alert.swift in Sources */,
 				72223C952B9016DC00C3CB92 /* SuggestionBox.swift in Sources */,
+				72D8D5212B92FB47001DDE6D /* InputTextController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +538,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		72D8D5192B92C0E0001DDE6D /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		72D8D51A2B92C0E0001DDE6D /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72D8D5192B92C0E0001DDE6D /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 72429BC42B8C228400E800EB /* Project object */;
 }
